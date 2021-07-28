@@ -35,10 +35,4 @@ opkg install luasocket lua-md5 lua-cjson luasec
 
 1.将 luci-app-ttnode.ipk 上传到路由器，并执行 opkg install /你上传的路径/luci-app-ttnode\*.ipk
 
-### 我的其它项目
-
-Argon theme ：https://github.com/jerrykuku/luci-theme-argon  
-Argon theme config ：https://github.com/jerrykuku/luci-app-argon-config  
-京东签到插件 ： https://github.com/jerrykuku/luci-app-jd-dailybonus  
-Hello World ：https://github.com/jerrykuku/luci-app-vssr  
-openwrt-nanopi-r1s-h5 ： https://github.com/jerrykuku/openwrt-nanopi-r1s-h5
+### 源自@jerrykuku大佬的源码，小改自用
