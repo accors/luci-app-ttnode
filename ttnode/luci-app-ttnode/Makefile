@@ -7,8 +7,8 @@
 include $(TOPDIR)/rules.mk
 PKG_NAME:=luci-app-ttnode
 LUCI_PKGARCH:=all
-PKG_VERSION:=0.4
-PKG_RELEASE:=20210728
+PKG_VERSION:=0.4_1
+PKG_RELEASE:=20210729
 
 include $(INCLUDE_DIR)/package.mk
 
