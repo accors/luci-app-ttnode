@@ -53,7 +53,12 @@ if (isLogin) then
 
     o = s:option(Value, 'serverchan', translate('Server酱 SCKEY'))
     o.rmempty = true
-    o.description = translate('微信推送，基于Server酱服务，请自行登录 http://sc.ftqq.com/ 绑定并获取 SCKEY ')
+    o.description = translate('微信推送，基于Server酱 Turbo版服务，请自行登录 http://sct.ftqq.com/ 绑定并获取 SCTKEY ')
+
+    --pushplus
+    o = s:option(Value, 'pushplus', translate('Pushplus 推送TOKEN'))
+    o.rmempty = true
+    o.description = translate('Pushplus推送，基于PUSHPLUS推送加服务，请自行登录 https://pushplus.plus/绑定并获取TOKEN ')
 
     -- telegram
 

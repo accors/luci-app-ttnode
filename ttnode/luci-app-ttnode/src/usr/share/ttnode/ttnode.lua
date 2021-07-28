@@ -9,6 +9,7 @@ local BASE_API = 'http://tiantang.mogencloud.com/api/v1/'
 local xformHeaders = {['Content-Type'] = 'application/x-www-form-urlencoded'}
 
 local sckey = uci:get_first(config, 'global', 'serverchan')
+local pushpluskey = uci:get_first(config, 'global', 'pushplus')
 local tg_token = uci:get_first(config, 'global', 'tg_token')
 local tg_userid = uci:get_first(config, 'global', 'tg_userid')
 local token = uci:get_first(config, 'global', 'token')
@@ -75,6 +76,10 @@ function ttnode.sendMsg(text, desp)
         local tg_data = 'chat_id='.. tg_userid ..'&text=' .. tg_msg .. '&parse_mode=html'
         response = requests.post {tg_url, data = tg_data, headers = xformHeaders}
     end
+    if pushpluskey:len() > 0 then
+        local pushplus_url = 'http://www.pushplus.plus/' .. pushpluskey .. 'send/?'
+        local pushplus_data = '&title=' .. text .. '&content=' .. desp
+        response = requests.post {pushplus_url, data = pushplus_data, headers = xformHeaders}
     return 1
 end
 
