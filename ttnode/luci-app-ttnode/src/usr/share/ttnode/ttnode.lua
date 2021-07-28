@@ -77,7 +77,7 @@ function ttnode.sendMsg(text, desp)
         response = requests.post {tg_url, data = tg_data, headers = xformHeaders}
     end
     if pushpluskey:len() > 0 then
-        local pushplus_url = 'http://www.pushplus.plus/send?' .. pushpluskey
+        local pushplus_url = 'http://www.pushplus.plus/send?/token=' .. pushpluskey
         local pushplus_data = '&title=' .. text .. '&content=' .. desp
         response = requests.post {pushplus_url, data = pushplus_data, headers = xformHeaders}
     end
