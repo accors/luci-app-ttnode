@@ -80,6 +80,7 @@ function ttnode.sendMsg(text, desp)
         local pushplus_url = 'http://www.pushplus.plus/' .. pushpluskey .. 'send/?'
         local pushplus_data = '&title=' .. text .. '&content=' .. desp
         response = requests.post {pushplus_url, data = pushplus_data, headers = xformHeaders}
+    end
     return 1
 end
 
