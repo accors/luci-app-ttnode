@@ -65,7 +65,7 @@ end
 --发送消息到Server酱 和 Telegram
 function ttnode.sendMsg(text, desp)
     if sckey:len() > 0 then
-        local url = 'https://sc.ftqq.com/' .. sckey .. '.send'
+        local url = 'https://sctapi.ftqq.com/' .. sckey .. '.send'
         local data = 'text=' .. text .. '&desp=' .. desp
         response = requests.post {url, data = data, headers = xformHeaders}
     end
